@@ -1,0 +1,27 @@
+{
+  "name": "photo_picture",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takaku1222/photo_picture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takaku1222/photo_picture/issues"
+  },
+  "homepage": "https://github.com/takaku1222/photo_picture#readme",
+  "dependencies": {
+    "zenn-cli": "^0.1.110"
+  }
+}
