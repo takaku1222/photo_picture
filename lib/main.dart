@@ -32,10 +32,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  List imageList = [];
+  
   File? _image;
   final _picker = ImagePicker();
 
-  Future getImageFromCamera() async {
+  Future<void> getImageFromCamera() async {
     final pickedFile = await _picker.pickImage(source: ImageSource.camera);
     setState(() {
       if (pickedFile != null) {
@@ -44,11 +47,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('カメラ',
+        title: Text('カメラ撮影',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.cyan,
@@ -58,13 +62,17 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('写真を撮る')
             : Image.file(_image!),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: getImageFromCamera,
-        child: Icon(Icons.photo_camera,
-          color: Colors.white,
-        ),
-        backgroundColor: Colors.cyan,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            onPressed: getImageFromCamera,
+            child: Icon(Icons.photo_camera,
+              color: Colors.white,
+            ),
+            backgroundColor: Colors.cyan,
+          ),
+        ],
       ),
     );
   }
