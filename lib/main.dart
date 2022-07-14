@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('カメラ撮影',
+        title: Text('カメラ',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.cyan,
