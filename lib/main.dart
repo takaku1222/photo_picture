@@ -63,13 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(
-            onPressed: getImageFromCamera,
-            child: Icon(
-              Icons.photo_camera,
-              color: Colors.white,
-            ),
-            backgroundColor: Colors.cyan,
-          ),
+              onPressed: getImageFromCamera,
+              child: Icon(
+                Icons.photo_camera,
+                color: Colors.white,
+              ),
+              backgroundColor: Colors.cyan),
         ],
       ),
     );
